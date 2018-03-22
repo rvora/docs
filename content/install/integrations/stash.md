@@ -48,6 +48,10 @@ services:
       - DRONE_SECRET=${DRONE_SECRET}
 ```
 
+# Stash URL
+
+Make sure there is no trailing slash on the URL. Otherwise you'll see failed login in Drone UI and BitBucket logs will show oauth_problem=signature_invalid error.
+
 # Private Key File
 
 The OAuth process in Bitbucket server requires a private and a public RSA certificate. This is how you create the private RSA certificate.
